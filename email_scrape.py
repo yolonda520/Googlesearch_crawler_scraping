@@ -23,7 +23,7 @@ def get_urls(tag, n, language):
     return urls
 
 # %%
-google_urls = get_urls('NewYork tour', 300 , 'en')
+google_urls = get_urls('Boston tour', 300 , 'en')
 
 # %%
 # Scrape websites using a Scrapy Spider
@@ -98,8 +98,8 @@ def get_info(tag, n, language, path, reject=[]):
 
 # %%
 bad_words = ['facebook', 'instagram', 'youtube', 'twitter', 'wiki']
-df = get_info('NewYork tour', 300 , 'en', 'vendors_email.csv', reject=bad_words)
-# %%
+df = get_info('Boston tour', 300 , 'en', 'vendors_email_boston.csv', reject=bad_words)
+  # %%
 df.head()
 
 # %%
